@@ -6,20 +6,26 @@ body {
     font-family: "Work Sans", sans-serif;
     margin: 0 auto;
 }
-main,.navigation{
+
+main,
+.navigation {
     width: 1240px;
     margin: 0 auto;
 }
-section{
+
+section {
     margin-bottom: 130px;
 }
+
 /* ----------- HEADER STYLES START -----------------
 ---------------------------------------------------- */
 
 /*----------- navigation styles start -------- */
-header{
+header {
     background-color: #ff900e1a;
+    margin-bottom: 130px;
 }
+
 .nav-bar {
     display: flex;
     align-items: center;
@@ -79,14 +85,64 @@ header{
     margin-bottom: 45px;
 }
 
+/*-----------------------------------------------------
+            MAIN SECTION STYLES START 
+------------------------------------------------------- */
+/*---- architects-group start -----*/
+.architects-group{
+    display: flex;
+    gap: 75px;
+    align-items: center;
+}
+.architects-team {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+}
+
+.team-info-title>.quick-list,
+.of-our,
+.features {
+    font-size: 45px;
+    font-weight: 700;
+}
+
+.quick-list {
+    color: #727272;
+}
+
+.of-our {
+    color: #131313;
+}
+
+.features {
+    color: #FF900E;
+}
+
+.team-info-description {
+    color: #727272;
+    font-size: 16px;
+    font-weight: 400;
+}
+/*---- architects-group end -----*/
+
+
+
+
+
+
 /*--------------------------------------------------------
 ----------------- Responsive styles start-----------  */
 @media screen and (max-width: 576px) {
-.hide{
-    display: none;
-}
+    .hide {
+        display: none;
+    }
+
     /* utilities */
-   header,body,main,.navigation {
+    header,
+    body,
+    main,
+    .navigation {
         width: 100%;
     }
 
@@ -109,15 +165,34 @@ header{
     .nav-list ul li {
         font-size: 24px;
     }
+
     /* banner responsive */
-    .banner{
+    .banner {
         display: flex;
         flex-direction: column-reverse;
     }
-    .banner-info .banner-title{
+
+    .banner-info .banner-title {
         margin-bottom: 0;
     }
-    .banner-image img{
+
+    .banner-image img {
         margin-bottom: 0;
+    }
+
+    /*------- main styles responsive -------*/
+
+    /* architects-group responsive */
+    .architects-group{
+        flex-direction: column;
+    }
+    .architects-team{
+        grid-template-columns: repeat(1,1fr);
+    }
+    .architects-team .team-img img{
+        width: 100%;
+    }
+    .architects-team-info{
+        text-align: center;
     }
 }
